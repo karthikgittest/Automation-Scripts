@@ -1,0 +1,16 @@
+[0529/153312.207:ERROR:file_io_win.cc(179)] CreateFile C:\Users\BANERA~1\AppData\Local\Temp\scoped_dir5868_17869\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[0601/151152.222:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0601/151152.485:ERROR:exception_snapshot_win.cc(88)] thread ID 16104 not found in process
+[0601/151152.485:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0601/152246.700:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0601/152246.703:ERROR:exception_snapshot_win.cc(88)] thread ID 16324 not found in process
+[0601/152246.703:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0601/164436.769:ERROR:scoped_process_suspend.cc(31)] NtSuspendProcess: An attempt was made to access an exiting process. (0xc000010a)
+[0601/164440.597:ERROR:process_info.cc(118)] ReadProcessMemory bool __cdecl crashpad::(anonymous namespace)::ReadStruct(HANDLE, crashpad::WinVMAddress, T *) [T = crashpad::process_types::PEB<crashpad::process_types::internal::Traits64>]: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0601/164440.597:ERROR:process_info.cc(545)] ReadProcessData failed
+[0601/164440.597:ERROR:process_reader_win.cc(242)] ReadMemory at 0x7feedd93218 of 12 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
+[0601/164440.597:WARNING:process_snapshot_win.cc(69)] ReadMemory ExceptionInformation failed
+[0601/164440.597:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed
+[0601/180208.047:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0601/180208.073:ERROR:exception_snapshot_win.cc(88)] thread ID 3920 not found in process
+[0601/180208.073:WARNING:crash_report_exception_handler.cc(62)] ProcessSnapshotWin::Initialize failed

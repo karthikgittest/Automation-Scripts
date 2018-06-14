@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20180601 18:24:47.222" generator="Robot 3.0.4 (Python 2.7.15 on win32)">
+<suite source="D:\LP\automationassignment\Learning_Platform\Tests\01_Learning_Platform.robot" id="s1" name="01 Learning Platform">
+<test id="s1-t1" name="Launch Learning Platform">
+<kw name="Set Environment Variable" library="OperatingSystem">
+<doc>Sets an environment variable to a specified value.</doc>
+<arguments>
+<arg>webdriver.chrome.driver</arg>
+<arg>D:\MyStuff\Selenium\chromedriver.exe</arg>
+</arguments>
+<msg timestamp="20180601 18:24:47.574" level="INFO">Environment variable 'webdriver.chrome.driver' set to value 'D:MyStuffSeleniumchromedriver.exe'.</msg>
+<status status="PASS" endtime="20180601 18:24:47.574" starttime="20180601 18:24:47.573"></status>
+</kw>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://learn-uat.ccl.org</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180601 18:24:47.575" level="INFO">Opening browser 'chrome' to base url 'https://learn-uat.ccl.org'.</msg>
+<status status="PASS" endtime="20180601 18:24:58.401" starttime="20180601 18:24:47.575"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="Selenium2Library">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${Delay}</arg>
+</arguments>
+<status status="PASS" endtime="20180601 18:24:58.406" starttime="20180601 18:24:58.403"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20180601 18:24:59.577" starttime="20180601 18:24:58.407"></status>
+</kw>
+<status status="PASS" endtime="20180601 18:24:59.579" critical="yes" starttime="20180601 18:24:47.572"></status>
+</test>
+<test id="s1-t2" name="Login to Learning Platform">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//input[@type='email']</arg>
+<arg>timeout=30</arg>
+<arg>error=User Name Input field not found</arg>
+</arguments>
+<status status="PASS" endtime="20180601 18:25:05.710" starttime="20180601 18:24:59.640"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@type='email']</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20180601 18:25:05.715" level="INFO">Typing text 'karthik@banerasoft.biz' into text field 'xpath=//input[@type='email']'.</msg>
+<status status="PASS" endtime="20180601 18:25:06.404" starttime="20180601 18:25:05.714"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@type='password']</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20180601 18:25:06.405" level="INFO">Typing text 'Learning$123' into text field 'xpath=//input[@type='password']'.</msg>
+<status status="PASS" endtime="20180601 18:25:06.816" starttime="20180601 18:25:06.405"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//span[contains(text(),'Log In')]</arg>
+</arguments>
+<msg timestamp="20180601 18:25:06.817" level="INFO">Clicking element 'xpath=//span[contains(text(),'Log In')]'.</msg>
+<status status="PASS" endtime="20180601 18:25:07.034" starttime="20180601 18:25:06.817"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>Learning Platform - CCL</arg>
+</arguments>
+<msg timestamp="20180601 18:25:07.065" level="INFO">Page title is 'Learning Platform - CCL'.</msg>
+<status status="PASS" endtime="20180601 18:25:07.065" starttime="20180601 18:25:07.036"></status>
+</kw>
+<status status="PASS" endtime="20180601 18:25:07.066" critical="yes" starttime="20180601 18:24:59.594"></status>
+</test>
+<test id="s1-t3" name="Choose Session">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//option[@value='24']</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" endtime="20180601 18:25:31.307" starttime="20180601 18:25:07.069"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//option[@value='24']</arg>
+</arguments>
+<msg timestamp="20180601 18:25:31.308" level="INFO">Clicking element 'xpath=//option[@value='24']'.</msg>
+<status status="PASS" endtime="20180601 18:25:31.400" starttime="20180601 18:25:31.308"></status>
+</kw>
+<status status="PASS" endtime="20180601 18:25:31.401" critical="yes" starttime="20180601 18:25:07.068"></status>
+</test>
+<test id="s1-t4" name="Expand Left Menu">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>xpath=//div[@id='left-menu']</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" endtime="20180601 18:25:31.493" starttime="20180601 18:25:31.410"></status>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>xpath=//div[@id='left-menu']</arg>
+</arguments>
+<msg timestamp="20180601 18:25:31.494" level="INFO">Simulating Mouse Over on element 'xpath=//div[@id='left-menu']'.</msg>
+<status status="PASS" endtime="20180601 18:25:31.544" starttime="20180601 18:25:31.494"></status>
+</kw>
+<status status="PASS" endtime="20180601 18:25:31.545" critical="yes" starttime="20180601 18:25:31.408"></status>
+</test>
+<status status="PASS" endtime="20180601 18:25:31.548" starttime="20180601 18:24:47.226"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="01 Learning Platform" pass="4">01 Learning Platform</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
